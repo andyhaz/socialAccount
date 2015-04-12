@@ -10,6 +10,7 @@
 
 @interface ViewController : UIViewController
 
+- (IBAction)twtterButton:(id)sender;
 
 @end
 

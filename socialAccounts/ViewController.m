@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "socialInterface.h"
 
 @interface ViewController ()
 
@@ -24,4 +25,10 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)twtterButton:(id)sender {
+    NSLog(@"twitter button");
+    socialInterface *si = [[socialInterface alloc]init];
+    
+    [self presentViewController:[si twitterPost:@"SocialInterface Post"] animated:YES completion:nil];
+}
 @end
