@@ -15,8 +15,13 @@
  0.1 first release
  
  Example:
+ Twitter
  socialInterface *si = [[socialInterface alloc]init];
  [self presentViewController:[si twitterPost:@"SocialInterface Post"] animated:YES completion:nil];
+ 
+ Facebooook:
+ socialInterface *si = [[socialInterface alloc]init];
+ [self presentViewController:[si facebookPost:@"SocialInterface Post"] animated:YES completion:nil];
 -------------------------------
  */
 #import <Foundation/Foundation.h>
@@ -25,5 +30,7 @@
 @interface socialInterface : NSObject
 
 -(UIViewController*)twitterPost :(NSString*)postText;
+
+-(UIViewController*)facebookPost :(NSString*)postText;
 
 @end

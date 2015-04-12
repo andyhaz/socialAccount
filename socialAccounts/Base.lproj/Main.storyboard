@@ -16,25 +16,31 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Be9-S5-cyo">
-                                <rect key="frame" x="260" y="285" width="81" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eVR-8C-cSm">
+                                <rect key="frame" x="260" y="254" width="81" height="30"/>
                                 <state key="normal" title="Twitter Post">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="twtterButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cPn-iB-zhz"/>
+                                    <action selector="twtterButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="J69-U1-umO"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N9k-aW-emk">
+                                <rect key="frame" x="252" y="316" width="96" height="30"/>
+                                <state key="normal" title="Facbook Post">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="facebookButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tIu-sd-DeE"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstAttribute="centerX" secondItem="Be9-S5-cyo" secondAttribute="centerX" id="PTe-qW-AiC"/>
-                            <constraint firstAttribute="centerY" secondItem="Be9-S5-cyo" secondAttribute="centerY" id="bx4-9e-bpK"/>
-                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="205" y="315"/>
         </scene>
     </scenes>
 </document>

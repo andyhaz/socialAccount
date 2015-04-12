@@ -11,7 +11,6 @@
 @implementation socialInterface
 
 -(UIViewController*)twitterPost :(NSString*)postText{
-    //NSLog(@"twitterPost:%@",postText);
     UIViewController *twitterString;
     // Twitter
     if ([SLComposeViewController isAvailableForServiceType:SLServiceTypeTwitter])
@@ -55,5 +54,36 @@
     }
     return twitterString;
 }
-
+-(UIViewController*)facebookPost :(NSString*)postText{
+    UIViewController *facebookString;
+// Facebook
+    if ([SLComposeViewController isAvailableForServiceType:SLServiceTypeFacebook])
+    {
+        SLComposeViewController *tweet = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeFacebook];
+        [tweet setInitialText:postText];
+        [tweet setCompletionHandler:^(SLComposeViewControllerResult result)
+         {
+             if (result == SLComposeViewControllerResultCancelled)
+             {
+                 NSLog(@"The user cancelled.");
+             }
+             else if (result == SLComposeViewControllerResultDone)
+             {
+                 NSLog(@"The user posted to Facebook");
+             }
+         }];
+        facebookString = tweet;
+    }
+    else
+    {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Facebook"
+                                                        message:@"Facebook integration is not available.  A Facebook account must be set up on your device."
+                                                       delegate:self
+                                              cancelButtonTitle:@"OK"
+                                              otherButtonTitles:nil];
+        [alert show];
+    }
+    
+    return facebookString;
+}
 @end

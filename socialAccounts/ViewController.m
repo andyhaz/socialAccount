@@ -29,6 +29,13 @@
     NSLog(@"twitter button");
     socialInterface *si = [[socialInterface alloc]init];
     
-    [self presentViewController:[si twitterPost:@"SocialInterface Post"] animated:YES completion:nil];
+    [self presentViewController:[si twitterPost:@"SocialInterface twittwe Post"] animated:YES completion:nil];
+}
+
+- (IBAction)facebookButton:(id)sender {
+    NSLog(@"facebook button");
+    socialInterface *si = [[socialInterface alloc]init];
+    
+    [self presentViewController:[si twitterPost:@"SocialInterface facebook Post"] animated:YES completion:nil];
 }
 @end

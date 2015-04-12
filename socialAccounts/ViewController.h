@@ -12,5 +12,6 @@
 
 - (IBAction)twtterButton:(id)sender;
 
+- (IBAction)facebookButton:(id)sender;
 @end
 
